@@ -1,0 +1,36 @@
+%!Adobe-FontList 1.23
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/kfox423/Downloads/Atlantic_Brand_Guidelines_9_22_23 Figtree Folder/Document fonts/AdobeFnt23.lst
+FileLength:612
+FileModTime:717622279
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Figtree-Light
+FamilyName:Figtree
+StyleName:Light
+MenuName:Figtree Light
+FamilyPrefix:Figtree
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Figtree Light
+WritingScript:Roman
+OutlineFileName:/Users/kfox423/Downloads/Atlantic_Brand_Guidelines_9_22_23 Figtree Folder/Document fonts/Figtree-VariableFont_wght.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:TrueTypeVariableFont
+FileLength:62868
+FileModTime:711915418
+NameArray:0,Win,1,Figtree Light
+NameArray:0,Win,16,Figtree
+%EndFont
+
