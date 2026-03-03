@@ -9,11 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Brand Colors and Gradient */
             --atlantic-deep-blue: #374a9e;
             --atlantic-teal: #3ac4de;
             --atlantic-gradient: linear-gradient(90deg, var(--atlantic-deep-blue) 0%, var(--atlantic-teal) 100%);
-            /* Dark text color from guidelines */
             --text-dark: #1d1d1f;
             --text-light: #ffffff;
             --bg-light: #f9f9fb;
@@ -35,18 +33,6 @@
             background-color: var(--white);
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         @keyframes shine {
@@ -113,7 +99,7 @@
             font-weight: 700;
             font-size: 14px;
             transition: opacity 0.3s ease;
-            display: none; /* Hidden initially, shown on scroll via JS if desired, or kept static */
+            display: none;
         }
 
         @media (min-width: 768px) {
@@ -122,7 +108,6 @@
             }
         }
 
-        /* Consistent brand image and white space */
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -169,7 +154,6 @@
             fill: var(--white);
         }
 
-        /* H1 and Typography styling */
         h1, h2, h3 {
             font-weight: 800;
             line-height: 1.1;
@@ -177,7 +161,6 @@
         }
 
         .eyebrow {
-            /* Eyebrow styling */
             text-transform: uppercase;
             font-weight: 800;
             font-size: 14px;
@@ -187,14 +170,19 @@
             display: block;
         }
 
-        /* SECTION 1 - HERO */
+        /* Utility classes */
+        .font-bold { font-weight: 700; }
+        .font-normal { font-weight: 400; }
+        .text-white { color: #ffffff; }
+
+        /* HERO */
         .hero {
             background-color: var(--bg-light);
             background-image: radial-gradient(circle at 10% 20%, rgba(58, 196, 222, 0.05) 0%, transparent 20%),
                               radial-gradient(circle at 90% 80%, rgba(55, 74, 158, 0.05) 0%, transparent 20%);
-            padding: 0 0 160px; /* Removed top padding */
+            padding: 0 0 160px;
             display: flex;
-            flex-direction: column; /* Stack header and content */
+            flex-direction: column;
             align-items: center;
             position: relative;
             overflow: hidden;
@@ -215,7 +203,7 @@
 
         .hero-header-full h1 {
             margin-bottom: 20px;
-            display: block; /* Show headline again */
+            display: block;
             font-size: 56px;
             font-weight: 800;
             line-height: 1.1;
@@ -231,31 +219,10 @@
             animation: shine 5s linear infinite;
         }
 
-        .webinar-title {
-            color: #fff;
-            font-size: 32px; /* Large and prominent */
-            text-transform: none;
-            font-weight: 800;
-            display: block;
-            margin-bottom: 20px;
-            line-height: 1.3;
-            letter-spacing: -0.5px;
-        }
-
         .hero h1 {
             font-size: 56px;
             margin-bottom: 20px;
             color: var(--text-dark);
-        }
-
-        .hero h1 span {
-            background: linear-gradient(90deg, #374a9e 0%, #3ac4de 50%, #374a9e 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: inline-block;
-            animation: shine 5s linear infinite;
         }
 
         .hero .subheadline {
@@ -283,13 +250,52 @@
             margin-top: 0;
             display: block;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            text-align: center; /* Center the text */
+            text-align: center;
         }
 
         .event-info-text {
-            font-size: 24px; /* Bigger text */
+            font-size: 24px;
             display: block;
             margin-bottom: 20px;
+        }
+
+        /* Ended Event State */
+        .ended-event {
+            display: none;
+        }
+
+        .ended-event .event-details h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+            background: var(--atlantic-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .ended-event .event-details p {
+            font-size: 22px;
+            color: #1d1d1f;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .ended-event .event-details .btn {
+            display: inline-block;
+            background: var(--atlantic-gradient);
+            color: white;
+            padding: 14px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(58, 196, 222, 0.4);
+        }
+
+        .ended-event .event-details .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(58, 196, 222, 0.6);
         }
 
         /* Countdown Timer */
@@ -344,7 +350,7 @@
             display: block;
         }
 
-        /* SECTION 2 - THE PROBLEM */
+        /* PROBLEM */
         .problem {
             text-align: center;
             max-width: 800px;
@@ -361,7 +367,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* SECTION 3 - GRID */
+        /* GRID */
         .grid-section {
             background-color: var(--bg-light);
             position: relative;
@@ -427,15 +433,14 @@
             color: var(--atlantic-deep-blue);
         }
 
-        /* SECTION 4 - SPEAKER */
+        /* SPEAKER */
         .speaker-section {
             position: relative;
             overflow: hidden;
-            background: var(--bg-light); /* Changed back to light background */
+            background: var(--bg-light);
             padding: 80px 0;
         }
 
-        /* Abstract Background Shapes */
         .speaker-bg-shape {
             position: absolute;
             border-radius: 50%;
@@ -461,19 +466,19 @@
 
         .speaker-grid {
             display: grid;
-            grid-template-columns: 280px 1fr; /* Reduced image width */
+            grid-template-columns: 280px 1fr;
             gap: 0;
             align-items: stretch;
             background: var(--white);
-            border-radius: 20px; /* Slightly smaller radius */
+            border-radius: 20px;
             padding: 0;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); /* Softer shadow */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
             overflow: hidden;
-            border: 1px solid rgba(0,0,0,0.05); /* Subtle border */
+            border: 1px solid rgba(0,0,0,0.05);
             position: relative;
             z-index: 2;
-            max-width: 900px; /* Constrain max width */
-            margin: 0 auto; /* Center the card */
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .headshot {
@@ -482,7 +487,7 @@
             border-radius: 0;
             box-shadow: none;
             background: #f0f0f0;
-            min-height: 320px; /* Reduced minimum height */
+            min-height: 320px;
         }
 
         .headshot img {
@@ -493,7 +498,7 @@
         }
 
         .speaker-info {
-            padding: 40px 50px; /* Adjusted padding */
+            padding: 40px 50px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -501,14 +506,14 @@
         }
 
         .speaker-info p {
-            font-size: 16px; /* Slightly smaller font */
+            font-size: 16px;
             color: #555;
             line-height: 1.6;
             margin: 0;
         }
 
         .speaker-info h2 {
-            font-size: 32px; /* Smaller headline */
+            font-size: 32px;
             margin-bottom: 16px;
             background: var(--atlantic-gradient);
             -webkit-background-clip: text;
@@ -516,7 +521,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* SECTION 6 - FINAL CTA */
+        /* FINAL CTA */
         .final-cta {
             background: #111;
             color: var(--text-light);
@@ -577,7 +582,7 @@
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
             gap: 60px;
-            align-items: center; /* Vertically center items */
+            align-items: center;
         }
 
         .video-container {
@@ -692,6 +697,12 @@
             .hero h1 {
                 font-size: 32px;
             }
+            .hero-header-full h1 {
+                font-size: 32px;
+            }
+            .hero-header-full .eyebrow {
+                font-size: 18px;
+            }
             .problem h2 {
                 font-size: 32px;
             }
@@ -711,16 +722,16 @@
     <div class="hero-header-full reveal">
         <div class="container">
             <span class="eyebrow">Free Live Webinar | Spring Clean Your Systems</span>
-            <h1><span>Breaking Up With Spreadsheets:<br>A Buyer’s Guide to Safety Training LMS</span></h1>
+            <h1><span>Breaking Up With Spreadsheets:<br>A Buyer's Guide to Safety Training LMS</span></h1>
         </div>
     </div>
     <div class="container hero-grid">
         <div class="hero-content reveal">
             <p>You didn't enter safety management to wrestle with broken pivot tables and chase down missing signatures. Spreadsheets are a liability. Yet, when spreadsheets become a liability, "audit panic" becomes your full-time job. It's time to break up with Excel and find a system that actually works in the trenches.</p>
-            
-            <p style="font-weight: 700; color: #000; margin-top: 24px;">Live Webinar: The Safety LMS Buyer's Guide<br>March 20 | 2pm EST — with Paul Zickert</p>
-            
-            <p>We'll help you:</p>
+
+            <p style="font-weight: 700; color: #000; margin-top: 24px;">Live Webinar: The Safety LMS Buyer's Guide<br>March 25 | 2pm EST — with Dr. David LaFazia</p>
+
+            <p class="font-bold">We'll help you:</p>
             <ul style="margin-bottom: 24px; padding-left: 20px; color: #4a4a4e;">
                 <li style="margin-bottom: 8px;">Identify the exact moment your legacy tools become a dangerous liability.</li>
                 <li style="margin-bottom: 8px;">Learn to produce "audit-ready" reports in seconds, not hours.</li>
@@ -730,7 +741,7 @@
         </div>
         <div class="hero-right-column reveal">
             <div class="video-container">
-                <img src="Photos/AdobeStock_1845027733.jpeg" alt="Webinar Video Thumbnail" class="video-thumbnail">
+                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/temp-thumbnail.jpeg?auto=compress&cs=tinysrgb&w=395&h=270&fit=crop" alt="Webinar Video Thumbnail" class="video-thumbnail">
                 <div class="play-button-overlay"></div>
             </div>
             <div style="text-align: center; margin-top: 40px;">
@@ -739,9 +750,8 @@
         </div>
         <div class="event-details-wrapper reveal">
             <div class="event-details">
-                <span class="event-info-text">Coming to your screen: March 20, 2026 | 2:00 PM EST • 45 Minutes + Live Q&A</span>
+                <span class="event-info-text">Coming to your screen: March 25, 2026 | 2:00 PM EST &bull; 45 Minutes + Live Q&amp;A</span>
                 <div class="countdown-container" id="countdown">
-                    <!-- JS will populate this -->
                     <div class="countdown-item">
                         <span class="countdown-number" id="days">00</span>
                         <span class="countdown-label">Days</span>
@@ -761,13 +771,31 @@
                 </div>
             </div>
         </div>
+
+        <div class="event-details-wrapper reveal ended-event">
+            <div class="event-details">
+                <h2>The Webinar is Now Available</h2>
+                <p>Whether you're joining us live or catching up after, you can access the session below.</p>
+                <a href="#register" class="btn">Access the Webinar</a>
+            </div>
+        </div>
     </div>
-    
+
     <!-- Wave Divider Bottom -->
     <div class="wave-divider wave-bottom">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="wave-fill-white"></path>
         </svg>
+    </div>
+</section>
+
+<section class="problem reveal">
+    <div class="container">
+        <h2>Let's Be Honest About Spreadsheets.</h2>
+        <p style="font-size: 20px; max-width: 700px; margin: 0 auto; color: #555;">Join us this March for a practical guide to dumping manual data entry. We'll help you navigate the market to find a Safety LMS that protects your people and your sanity.</p>
+        <div style="margin-top: 40px;">
+            <a href="#register" class="btn-large">Join the Session</a>
+        </div>
     </div>
 </section>
 
@@ -786,32 +814,32 @@
         </div>
         <div class="grid">
             <div class="card reveal">
-                <img src="1x/Artboard%2013%20copy%209.png" alt="Red Flags" class="card-icon">
+                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-shield-check.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Red Flags" class="card-icon">
                 <h3>The Red Flags</h3>
                 <p>Identifying the exact moment your spreadsheet (or legacy software) becomes a dangerous liability rather than a tool.</p>
             </div>
             <div class="card reveal">
-                <img src="1x/Artboard%2013.png" alt="Needs vs Wants" class="card-icon">
+                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/circle-comm.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Needs vs Wants" class="card-icon">
                 <h3>Needs vs. Wants</h3>
                 <p>How to separate "shiny object" features from the absolute essentials needed for rock-solid safety tracking.</p>
             </div>
             <div class="card reveal">
-                <img src="1x/Artboard%2013%20copy.png" alt="Audit Test" class="card-icon">
+                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-progress.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Audit Test" class="card-icon">
                 <h3>The Audit Test</h3>
                 <p>What to look for in reporting tools so you can produce audit-ready records in seconds, not hours.</p>
             </div>
             <div class="card reveal">
-                <img src="1x/Artboard%204.png" alt="Field-Friendly" class="card-icon">
+                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-users.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Field-Friendly" class="card-icon">
                 <h3>Field-Friendly</h3>
                 <p>Why picking a system your field crews can actually figure out is the most important "feature" of all.</p>
             </div>
             <div class="card reveal">
-                <img src="1x/Artboard%2036.png" alt="Budget Clarity" class="card-icon">
+                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-data-dashboard.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Budget Clarity" class="card-icon">
                 <h3>Budget Clarity</h3>
                 <p>Navigating confusing pricing models to find a platform that respects your budget without cutting corners on safety.</p>
             </div>
             <div class="card reveal">
-                <img src="1x/Artboard%2013%20copy%209.png" alt="Buyer's Checklist" class="card-icon">
+                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-shield-check.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Buyer's Checklist" class="card-icon">
                 <h3>The Buyer's Checklist</h3>
                 <p>A printable rubric to help you "grill" potential vendors and confidently choose your next safety partner.</p>
             </div>
@@ -819,30 +847,19 @@
     </div>
 </section>
 
-<section class="problem reveal">
-    <div class="container">
-        <h2>Let's Be Honest About Spreadsheets.</h2>
-        <p style="font-size: 20px; max-width: 700px; margin: 0 auto; color: #555;">Join us this March for a practical guide to dumping manual data entry. We'll help you navigate the market to find a Safety LMS that protects your people and your sanity.</p>
-        <div style="margin-top: 40px;">
-            <a href="#register" class="btn-large">Join the Session</a>
-        </div>
-    </div>
-</section>
-
 <section class="speaker-section">
     <div class="speaker-bg-shape shape-1"></div>
     <div class="speaker-bg-shape shape-2"></div>
-    
+
     <div class="container">
         <div class="speaker-grid reveal">
             <div class="headshot">
-                <img src="Paul%20Zickert.png" alt="Paul Zickert">
+                <img src="https://atlantictraining.imgix.net/wysiwyg/files/content-specialists/david.avif?auto=compress&cs=tinysrgb&w=280&h=622&fit=crop" alt="Dr. David LaFazia">
             </div>
             <div class="speaker-info">
                 <span class="eyebrow">Your Host</span>
-                <h2>Paul Zickert</h2>
-                <p style="font-size: 18px; color: #555; margin-bottom: 20px;">Paul Zickert is a seasoned technology and sales leader with over 20 years of experience driving digital transformation across the healthcare, trade show, and corporate event industries. Throughout his career, Paul has specialized in leveraging SaaS platforms and data-driven insights to scale business operations and enhance the customer experience.</p>
-                <p style="font-size: 18px; color: #555;">His extensive background includes a key leadership tenure at GES (Global Experience Specialists), where he led the global product and pre-sales teams for client-facing technology. Earlier in his career, Paul gained foundational experience in the healthcare sector at CVS Health, where he contributed to the intersection of technology and service delivery. A frequent speaker at major industry events like Dreamforce, Paul is passionate about using technology to re-envision traditional roles and drive organizational efficiency.</p>
+                <h2>Dr. David LaFazia</h2>
+                <p style="font-size: 18px; color: #555; margin-bottom: 20px;">Dr. David LaFazia is a key Subject Matter Expert for Atlantic Training, blending years of hands-on technical experience with an earned doctorate in educational leadership and curriculum design. This unique combination allows him to identify training solutions that are not only technically precise but also instructionally effective. In this webinar, David will share his insights on how to choose an LMS that genuinely supports and engages the modern workforce.</p>
             </div>
         </div>
     </div>
@@ -850,10 +867,14 @@
 
 <section class="grid-section" style="padding-top: 40px;">
     <div class="container">
-        <h2 style="text-align:center; margin-bottom: 40px;" class="reveal">Bonus Materials for Attendees</h2>
-        <div style="display: flex; justify-content: center; max-width: 800px; margin: 0 auto;" class="reveal">
+        <div style="display: flex; justify-content: center; max-width: 800px; margin: 0 auto; gap: 24px;" class="reveal">
             <div class="card" style="max-width: 500px; width: 100%; text-align: center;">
-                <img src="assets/icons/23.png" alt="Safety Debt Assessment" class="card-icon" style="margin: 0 auto 20px;">
+                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-shield-acc.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Course Development Process Kit" class="card-icon" style="margin: 0 auto 20px;">
+                <h3>Course Development Process Kit</h3>
+                <p>Checklists, and templates for creating a training program.</p>
+            </div>
+            <div class="card" style="max-width: 500px; width: 100%; text-align: center;">
+                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-shield-acc.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Safety Debt Assessment" class="card-icon" style="margin: 0 auto 20px;">
                 <h3>Safety Debt Assessment</h3>
                 <p>A "Safety Debt" assessment for Construction crews.</p>
             </div>
@@ -863,8 +884,8 @@
 
 <section class="final-cta" id="register">
     <div class="container reveal">
-        <h2>Ready to Ditch the Data Drama?</h2>
-        <p>Join us to see how simple safety training can actually be.</p>
+        <h2 class="text-white">Ready to Ditch the Data Drama?</h2>
+        <p class="text-white">Join us to see how simple safety training can actually be.</p>
         <script src="https://js.hsforms.net/forms/embed/5486514.js" defer></script>
         <div class="hs-form-frame" data-region="na1" data-form-id="3a25859a-ab43-4043-9e44-a69d081e936c" data-portal-id="5486514"></div>
     </div>
@@ -872,11 +893,32 @@
 
 <script>
     // Countdown Timer
-    const webinarDate = new Date("March 20, 2026 14:00:00 EST").getTime();
+    const webinarDate = new Date("March 25, 2026 14:00:00 EST").getTime();
 
-    const timer = setInterval(function() {
+    const upcomingEvent = document.querySelector(".event-details-wrapper:not(.ended-event)");
+    const endedEvent = document.querySelector(".ended-event");
+
+    function showEndedEvent() {
+        if (upcomingEvent) upcomingEvent.style.display = "none";
+        if (endedEvent) endedEvent.style.display = "block";
+    }
+
+    function showUpcomingEvent() {
+        if (upcomingEvent) upcomingEvent.style.display = "block";
+        if (endedEvent) endedEvent.style.display = "none";
+    }
+
+    function updateCountdown() {
         const now = new Date().getTime();
         const distance = webinarDate - now;
+
+        if (distance <= 0) {
+            showEndedEvent();
+            document.getElementById("countdown").innerHTML = "WEBINAR IS LIVE!";
+            return true;
+        }
+
+        showUpcomingEvent();
 
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -887,12 +929,18 @@
         document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
         document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
         document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+        return false;
+    }
 
-        if (distance < 0) {
-            clearInterval(timer);
-            document.getElementById("countdown").innerHTML = "WEBINAR IS LIVE!";
-        }
-    }, 1000);
+    if (updateCountdown()) {
+        // Countdown already complete on page load
+    } else {
+        const timer = setInterval(function () {
+            if (updateCountdown()) {
+                clearInterval(timer);
+            }
+        }, 1000);
+    }
 
     // Scroll Reveal Animation
     function reveal() {
@@ -907,10 +955,8 @@
         }
     }
     window.addEventListener("scroll", reveal);
-    // Trigger once on load
     reveal();
 </script>
 
 </body>
 </html>
-
