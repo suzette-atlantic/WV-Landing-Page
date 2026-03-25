@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>On-Demand Replay: Breaking Up With Spreadsheets — Safety LMS Buyer's Guide | Atlantic Training</title>
+    <title>Workplace Violence Prevention Checklist | Atlantic Training Resource Hub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -195,7 +195,6 @@
             font-size: 52px;
             max-width: 900px;
             margin: 0 auto;
-            white-space: nowrap;
         }
 
         .hero-title-band h1 span {
@@ -208,7 +207,7 @@
             animation: shine 5s linear infinite;
         }
 
-        /* ── HERO video band (dark) ── */
+        /* ── HERO content band (dark) ── */
         .hero {
             background-color: #000;
             background-image: radial-gradient(ellipse at 50% 40%, rgba(58, 196, 222, 0.15) 0%, rgba(55, 74, 158, 0.08) 40%, transparent 70%);
@@ -234,14 +233,14 @@
             animation: shine 5s linear infinite;
         }
 
-        .hero-video-wrap {
+        /* ── Document Mockup ── */
+        .document-mockup {
             width: 100%;
-            max-width: 800px;
+            max-width: 420px;
             margin-bottom: 48px;
-        }
-
-        .hero .video-note {
-            color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.08);
+            display: block;
         }
 
         .hero-copy {
@@ -263,145 +262,7 @@
             line-height: 1.7;
         }
 
-        /* ── Video Preview ── */
-        .video-container {
-            width: 100%;
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-            cursor: pointer;
-            transition: all 0.4s ease;
-        }
-
-        .video-container:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
-        }
-
-        .video-thumbnail {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .video-container:hover .video-thumbnail {
-            transform: scale(1.03);
-        }
-
-        .play-button-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            animation: pulse-blue 2s infinite;
-        }
-
-        .video-container:hover .play-button-overlay {
-            background: #fff;
-            transform: translate(-50%, -50%) scale(1.15);
-            animation: none;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .play-button-overlay::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 24px solid var(--atlantic-deep-blue);
-            border-top: 14px solid transparent;
-            border-bottom: 14px solid transparent;
-            margin-left: 5px;
-        }
-
-        .preview-badge {
-            position: absolute;
-            top: 16px;
-            left: 16px;
-            background: var(--atlantic-gradient);
-            color: #fff;
-            font-size: 11px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            padding: 6px 16px;
-            border-radius: 50px;
-            z-index: 2;
-        }
-
-        .video-note {
-            text-align: center;
-            font-size: 13px;
-            color: #888;
-            margin-top: 14px;
-            font-weight: 600;
-        }
-
-        /* ── Video Modal ── */
-        .video-modal-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.85);
-            z-index: 9999;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-        }
-
-        .video-modal-overlay.open {
-            display: flex;
-        }
-
-        .video-modal {
-            position: relative;
-            width: 100%;
-            max-width: 900px;
-            aspect-ratio: 16/9;
-            border-radius: 16px;
-            overflow: hidden;
-            background: #000;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
-        }
-
-        .video-modal iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: -48px;
-            right: 0;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.15);
-            border: none;
-            border-radius: 50%;
-            color: #fff;
-            font-size: 22px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.2s ease;
-        }
-
-        .modal-close:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        /* ── "What You'll Learn" Grid ── */
+        /* ── "Inside the Checklist" Grid ── */
         .grid-section {
             background-color: var(--bg-light);
             position: relative;
@@ -469,73 +330,6 @@
             line-height: 1.6;
         }
 
-        /* ── Speaker (compact) ── */
-        .speaker-section {
-            position: relative;
-            overflow: hidden;
-            background: var(--white);
-            padding: 60px 0;
-        }
-
-        .speaker-grid {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 0;
-            align-items: stretch;
-            background: var(--bg-light);
-            border-radius: 16px;
-            padding: 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-            overflow: hidden;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .headshot {
-            width: 100%;
-            height: 100%;
-            background: #e8e8e8;
-            min-height: 260px;
-        }
-
-        .headshot img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .speaker-info {
-            padding: 32px 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: left;
-        }
-
-        .speaker-info .eyebrow {
-            margin-bottom: 8px;
-        }
-
-        .speaker-info h2 {
-            font-size: 26px;
-            margin-bottom: 12px;
-            background: var(--atlantic-gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .speaker-info p {
-            font-size: 15px;
-            color: #555;
-            line-height: 1.6;
-            margin: 0;
-        }
-
         /* ── Final CTA / Gated Form ── */
         .final-cta {
             background: #111;
@@ -597,17 +391,6 @@
             .hero {
                 padding: 60px 0 100px;
             }
-            .speaker-grid {
-                grid-template-columns: 1fr;
-            }
-            .headshot {
-                height: 260px;
-                min-height: auto;
-            }
-            .speaker-info {
-                padding: 30px;
-                text-align: center;
-            }
             .grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -639,6 +422,9 @@
             .final-cta h2 {
                 font-size: 32px;
             }
+            .document-mockup {
+                max-width: 280px;
+            }
         }
     </style>
 </head>
@@ -648,41 +434,33 @@
 <header>
     <div class="header-content">
         <img src="assets/AT_Logo.png" alt="Atlantic Training" class="logo">
-        <a href="#register" class="header-cta">Unlock the Recording</a>
+        <a href="#download" class="header-cta">Download Checklist</a>
     </div>
 </header>
 
 <!-- ═══════════════════════════════════════════════ HERO TITLE ═══ -->
 <section class="hero-title-band reveal">
     <div class="container">
-        <span class="eyebrow">On-Demand Webinar Replay</span>
-        <h1><span>Breaking Up With Spreadsheets:<br>A Buyer's Guide to Safety Training LMS</span></h1>
+        <span class="eyebrow">Free Safety Checklist</span>
+        <h1><span>Is Your Facility Prepared?</span><br>The Essential Workplace Violence Prevention Checklist</h1>
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════ HERO VIDEO ═══ -->
+<!-- ═══════════════════════════════════════════════ HERO CONTENT ═══ -->
 <section class="hero">
     <div class="container hero-cinematic reveal">
-        <div class="hero-video-wrap">
-            <div class="video-container" id="previewTrigger">
-                <span class="preview-badge">Preview</span>
-                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/temp-thumbnail.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop" alt="Webinar Preview Thumbnail" class="video-thumbnail">
-                <div class="play-button-overlay"></div>
-            </div>
-            <p class="video-note">Full replay unlocked after registration.</p>
-        </div>
+        <img src="Workplace Violence Checklist.png" alt="Workplace Violence Prevention Checklist Document" class="document-mockup">
 
         <div class="hero-copy">
-            <p class="subhead">Missed the live session? The spreadsheets are still messy, but the exit strategy is now on-demand.</p>
-            <p>If you are still spending half your week acting as a "Data Janitor", chasing signatures and fighting with formulas, this guide is your way out. We skipped the sales fluff to give you a raw, honest look at the Safety LMS market, how to identify the "red flags" in your current system, grill vendors on hidden costs, and finally swap "audit panic" for automated compliance.</p>
+            <p class="subhead">Stop reacting and start preventing. Turn compliance requirements into an actionable safety plan.</p>
+            <p>Workplace violence remains one of the most under-prepared-for hazards in every industry. Regulatory standards are tightening, legal exposure is growing, and a binder on a shelf is no longer enough. This checklist bridges the gap between passive awareness training and real-world prevention, giving you a step-by-step framework to assess risk, build reporting protocols, and meet OSHA compliance head-on.</p>
         </div>
 
-        <a href="#register" class="btn-large">Unlock the Recording</a>
+        <a href="#download" class="btn-large">Download Your Free Copy</a>
     </div>
-
 </section>
 
-<!-- ═══════════════════════════════════════════════ WHAT YOU'LL LEARN ═══ -->
+<!-- ═══════════════════════════════════════════════ INSIDE THE CHECKLIST ═══ -->
 <section class="grid-section">
     <div class="wave-divider wave-top">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -692,117 +470,60 @@
 
     <div class="container">
         <div class="reveal" style="text-align: center;">
-            <span class="eyebrow" style="display: inline-block;">What You'll Learn</span>
-            <h2 style="margin-bottom: 40px;">Inside the Buyer's Guide Recording</h2>
+            <span class="eyebrow" style="display: inline-block;">What's Inside</span>
+            <h2 style="margin-bottom: 40px;">Inside the Prevention Checklist</h2>
         </div>
         <div class="grid">
             <div class="card reveal">
-                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-shield-check.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Red Flags" class="card-icon">
-                <h3>The Red Flags</h3>
-                <p>Identify the exact moment your spreadsheet or legacy software becomes a dangerous liability rather than a tool.</p>
+                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-shield-check.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Compliance & Paperwork" class="card-icon">
+                <h3>Compliance & Paperwork</h3>
+                <p>Learn how to create a custom Workplace Violence Prevention Plan (WVPP) and maintain legally compliant incident logs to cover your assets.</p>
             </div>
             <div class="card reveal">
-                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/circle-comm.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Needs vs Wants" class="card-icon">
-                <h3>Needs vs. Wants</h3>
-                <p>Separate "shiny object" features from the absolute essentials needed for rock-solid safety tracking.</p>
+                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/circle-comm.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Architectural Security" class="card-icon">
+                <h3>Architectural Security</h3>
+                <p>Discover how to "design out the danger" using uniform lighting, clear sight-lines, and strict access control to sensitive employee-only zones.</p>
             </div>
             <div class="card reveal">
-                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-progress.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Audit Test" class="card-icon">
-                <h3>The Audit Test</h3>
-                <p>What to look for in reporting tools so you can produce audit-ready records in seconds, not hours.</p>
+                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-progress.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Spotting Red Flags" class="card-icon">
+                <h3>Spotting Red Flags</h3>
+                <p>Train your managers to identify "Level One" warning signs, from severe mood swings to sudden, unexplained disregard for basic safety rules.</p>
             </div>
             <div class="card reveal">
-                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-users.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Field-Friendly" class="card-icon">
-                <h3>Field-Friendly Design</h3>
-                <p>Why picking a system your field crews can actually figure out is the most important "feature" of all.</p>
+                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-users.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="De-Escalation & Verbal Judo" class="card-icon">
+                <h3>De-Escalation & Verbal Judo</h3>
+                <p>Equip your team with basic de-escalation body language, safe distancing techniques, and the verbal skills needed to defuse situations safely.</p>
             </div>
             <div class="card reveal">
-                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-data-dashboard.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Budget Clarity" class="card-icon">
-                <h3>Budget Clarity</h3>
-                <p>Navigate confusing pricing models and find a platform that respects your budget without cutting corners on safety.</p>
+                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-data-dashboard.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Safe Reporting Systems" class="card-icon">
+                <h3>Safe Reporting Systems</h3>
+                <p>Implement zero-retaliation reporting channels and ensure Support Systems like your EAP and the 988 Crisis Lifeline are properly utilized.</p>
             </div>
             <div class="card reveal">
-                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-shield-check.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Buyer's Checklist" class="card-icon">
-                <h3>The Buyer's Checklist</h3>
-                <p>A printable rubric to help you "grill" potential vendors and confidently choose your next safety partner.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════ SPEAKER (compact) ═══ -->
-<section class="speaker-section">
-    <div class="container">
-        <div class="speaker-grid reveal">
-            <div class="headshot">
-                <img src="https://atlantictraining.imgix.net/wysiwyg/files/content-specialists/david.avif?auto=compress&cs=tinysrgb&w=200&h=400&fit=crop" alt="Dr. David LaFazia">
-            </div>
-            <div class="speaker-info">
-                <span class="eyebrow">Speaker</span>
-                <h2>Dr. David LaFazia</h2>
-                <p>Dr. David LaFazia is a key Subject Matter Expert for Atlantic Training, blending years of hands-on technical experience with an earned doctorate in educational leadership and curriculum design. This unique combination allows him to identify training solutions that are not only technically precise but also instructionally effective. In this webinar, David will share his insights on how to choose an LMS that genuinely supports and engages the modern workforce.</p>
+                <img src="https://atlantictraining.imgix.net/redesign_assets/webinar/icon-shield-check.png?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop" alt="Training & Documentation" class="card-icon">
+                <h3>Training & Documentation</h3>
+                <p>Move beyond dusty manuals with interactive hazard recognition education and meticulous record-keeping protocols that actually work.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════ FINAL CTA / FORM ═══ -->
-<section class="final-cta" id="register">
+<section class="final-cta" id="download">
     <div class="container reveal">
-        <h2>Unlock the "Buyer's Guide" Recording</h2>
-        <p>Join hundreds of Safety Managers who have already ditched their spreadsheets and get instant access to the full video replay.</p>
+        <h2>Download the Prevention Checklist</h2>
+        <p>Join proactive Safety Managers who use this checklist to protect their teams and ensure compliance. Enter your details below to get instant access.</p>
         <div class="form-wrapper">
+            <!-- TODO: Replace data-form-id with the HubSpot form ID for the Workplace Violence Prevention Checklist lead magnet -->
             <script src="https://js.hsforms.net/forms/embed/5486514.js" defer></script>
             <div class="hs-form-frame" data-region="na1" data-form-id="3c10ec13-2439-491c-aa87-657b2736a8d2" data-portal-id="5486514"></div>
         </div>
-        <p class="privacy-note" style="white-space: nowrap;">We respect your privacy. No spam, just the recording and a few helpful resources.</p>
+        <p class="privacy-note" style="white-space: nowrap;">We respect your privacy. No spam, just the checklist and a few helpful resources.</p>
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════ VIDEO MODAL ═══ -->
-<div class="video-modal-overlay" id="videoModal">
-    <div class="video-modal">
-        <button class="modal-close" id="modalClose" aria-label="Close video">&times;</button>
-        <iframe id="modalIframe" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-</div>
-
 <!-- ═══════════════════════════════════════════════ JS ═══ -->
 <script>
-    // Preview Video Modal
-    (function () {
-        var trigger = document.getElementById('previewTrigger');
-        var overlay = document.getElementById('videoModal');
-        var iframe  = document.getElementById('modalIframe');
-        var closeBtn = document.getElementById('modalClose');
-
-        // Replace with your actual preview video embed URL
-        var previewSrc = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0';
-
-        function openModal() {
-            iframe.src = previewSrc;
-            overlay.classList.add('open');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            overlay.classList.remove('open');
-            iframe.src = '';
-            document.body.style.overflow = '';
-        }
-
-        trigger.addEventListener('click', openModal);
-        closeBtn.addEventListener('click', closeModal);
-
-        overlay.addEventListener('click', function (e) {
-            if (e.target === overlay) closeModal();
-        });
-
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
-        });
-    })();
-
     // Scroll Reveal Animation
     function reveal() {
         var reveals = document.querySelectorAll('.reveal');
